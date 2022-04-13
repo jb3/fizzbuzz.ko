@@ -1,0 +1,10 @@
+.idea/
+*~
+
+Module.symvers
+fizzbuzz.ko
+fizzbuzz.mod*
+fizzbuzz.o
+modules.order
+.*
+!.gitignore

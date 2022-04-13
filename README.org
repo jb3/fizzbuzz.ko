@@ -1,0 +1,35 @@
+#+TITLE: FizzBuzz.ko
+
+FizzBuzz as a kernel module.
+
+** Compiling
+
+Simply run ~make~ in the directory, ensure you have the Linux Kernel headers installed.
+
+** Loading
+
+#+BEGIN_SRC
+# To insert module
+$ sudo insmod fizzbuzz.ko
+# To remove the module
+$ sudo rmmod fizzbuzz
+#+END_SRC
+
+** Viewing output
+
+Use ~dmesg~ to view output from the module.
+
+#+BEGIN_SRC
+$ sudo dmesg -H | grep fizzbuzz
+[  +0.001403] fizzbuzz: Loading the FizzBuzz module
+[  +0.000002] fizzbuzz: 1
+[  +0.000000] fizzbuzz: 2
+[  +0.000000] fizzbuzz: Fizz!
+[  +0.000001] fizzbuzz: 4
+[  +0.000000] fizzbuzz: Buzz!
+[  +0.001470] fizzbuzz: Unloading the FizzBuzz module.
+#+END_SRC
+
+** License
+
+All code is licensed under MIT.
